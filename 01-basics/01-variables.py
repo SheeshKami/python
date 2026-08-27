@@ -1,16 +1,12 @@
 """
 01 - Variables
 
-A variable is a name that refers to a value stored in memory.
+A variable is a name that refers to a value in memory.
 
 Syntax:
     variable_name = value
 
-Example:
-    name = "Mridul"
-
-Python is dynamically typed, so we don't need to declare the
-data type explicitly.
+Python is dynamically typed — no need to declare the type.
 """
 
 # ============================================================
@@ -22,12 +18,11 @@ food = "pasta"
 email = "mridulbud@gmail.com"
 
 print(first_name)                    # Mridul
-print("first_name")                  # first_name
+print("first_name")                  # first_name (just text)
 print("Hi", first_name)              # Hi Mridul
 
-# f-string: useful for inserting variables into text
+# f-string
 print(f"Hi {first_name}, your favorite food is {food}")
-# Hi Mridul, your favorite food is pasta
 
 
 # ============================================================
@@ -39,8 +34,6 @@ year = 2026
 
 print(age)
 print(f"You are {age} years old.")
-
-# age = "17" would make age a string, not an integer.
 
 
 # ============================================================
@@ -94,8 +87,8 @@ print(city)
 # 7. CONSTANTS
 # ============================================================
 
-# Python doesn't have true constants.
-# UPPERCASE is a convention meaning "don't change this".
+# Python has no true constants.
+# UPPERCASE is just a convention: "don't change this".
 
 PI = 3.14159
 MAX_USERS = 100
@@ -108,12 +101,12 @@ MAX_USERS = 100
 """
 Common built-in types:
 
-str     -> "Hello"
-int     -> 17
-float   -> 9.99
-bool    -> True / False
+str   -> "Hello"
+int   -> 17
+float -> 9.99
+bool  -> True / False
 
-Useful function:
+Useful:
     type(value)
 
 Important:
@@ -121,9 +114,7 @@ Important:
     17    -> int
     17.0  -> float
 
-Python is dynamically typed:
+Dynamically typed:
     age = 17
-    age = "seventeen"
-
-The variable can refer to values of different types.
+    age = "seventeen"   # completely fine
 """
