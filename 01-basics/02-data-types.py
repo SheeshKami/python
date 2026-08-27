@@ -1,23 +1,22 @@
 """
 02 - Data Types
 
-A data type tells Python what kind of value a variable contains.
+A data type tells Python what kind of value a variable holds.
 
-Python is dynamically typed, so we don't have to declare the
-data type when creating a variable.
+Python is dynamically typed — no need to declare the type.
 
-Common built-in data types:
+Common built-in types:
 
     str      -> text
     int      -> whole numbers
-    float    -> decimal numbers
+    float    -> decimals
     complex  -> complex numbers
     bool     -> True / False
     NoneType -> no value
 
-    list     -> ordered, mutable collection
-    tuple    -> ordered, immutable collection
-    set      -> unordered collection of unique values
+    list     -> ordered, mutable
+    tuple    -> ordered, immutable
+    set      -> unordered, unique
     dict     -> key-value pairs
 """
 
@@ -31,10 +30,8 @@ message = 'Hello'
 print(name)
 print(type(name))       # <class 'str'>
 
-# Strings can contain letters, numbers and symbols.
-# Anything inside quotes is a string.
-
-number = "17"           # This is a STRING, not an integer.
+# Anything inside quotes is a string
+number = "17"           # still a string, not an int
 
 
 # ============================================================
@@ -43,7 +40,7 @@ number = "17"           # This is a STRING, not an integer.
 
 age = 17
 year = 2026
-negative_number = -10
+negative = -10
 
 print(age)
 print(type(age))        # <class 'int'>
@@ -54,7 +51,7 @@ print(type(age))        # <class 'int'>
 # ============================================================
 
 price = 99.99
-temperature = 36.5
+temp = 36.5
 
 print(price)
 print(type(price))      # <class 'float'>
@@ -64,9 +61,7 @@ print(type(price))      # <class 'float'>
 # 4. COMPLEX (complex)
 # ============================================================
 
-# Complex numbers have a real and imaginary part.
-# Python uses 'j' for the imaginary part.
-
+# Real + imaginary part (j for imaginary)
 z = 3 + 4j
 
 print(z)
@@ -83,8 +78,6 @@ is_logged_in = False
 print(is_student)
 print(type(is_student)) # <class 'bool'>
 
-# Booleans are commonly used with conditions.
-
 if is_student:
     print("Student account")
 else:
@@ -95,8 +88,7 @@ else:
 # 6. NONE (NoneType)
 # ============================================================
 
-# None represents the absence of a value.
-
+# Represents absence of a value
 result = None
 
 print(result)
@@ -110,16 +102,13 @@ if result is None:
 # 7. LIST
 # ============================================================
 
-# Ordered and MUTABLE collection.
-# Mutable = can be changed after creation.
-
+# Ordered + mutable
 subjects = ["Physics", "Chemistry", "Maths"]
 
 print(subjects)
 print(type(subjects))   # <class 'list'>
 
 subjects.append("Computer Science")
-
 print(subjects)
 
 
@@ -127,9 +116,7 @@ print(subjects)
 # 8. TUPLE
 # ============================================================
 
-# Ordered and IMMUTABLE collection.
-# Immutable = cannot be changed after creation.
-
+# Ordered + immutable
 coordinates = (28.45, 77.03)
 
 print(coordinates)
@@ -140,22 +127,18 @@ print(type(coordinates))    # <class 'tuple'>
 # 9. SET
 # ============================================================
 
-# Unordered collection of UNIQUE values.
-
+# Unordered + unique values only
 numbers = {1, 2, 3, 3, 4}
 
-print(numbers)
+print(numbers)              # {1, 2, 3, 4}
 print(type(numbers))        # <class 'set'>
-
-# Duplicate values are automatically removed.
 
 
 # ============================================================
 # 10. DICTIONARY
 # ============================================================
 
-# Stores data as KEY : VALUE pairs.
-
+# Key : Value pairs
 student = {
     "name": "Mridul",
     "age": 17,
@@ -170,17 +153,15 @@ print(student["age"])       # 17
 
 
 # ============================================================
-# 11. CHECKING DATA TYPES
+# 11. CHECKING TYPES
 # ============================================================
 
 x = 100
 
 print(type(x))              # <class 'int'>
-
-# isinstance() checks whether a value belongs to a type.
-
 print(isinstance(x, int))   # True
 print(isinstance(x, str))   # False
+
 
 # ============================================================
 # QUICK REFERENCE
@@ -192,34 +173,17 @@ int      -> 17
 float    -> 17.5
 complex  -> 3 + 4j
 bool     -> True / False
-None     -> No value
+None     -> no value
 
 list     -> [1, 2, 3]
 tuple    -> (1, 2, 3)
 set      -> {1, 2, 3}
-dict     -> {"name": "Mridul", "age": 17}
+dict     -> {"name": "Mridul"}
 
-Useful functions:
-
+Useful:
     type(x)
     isinstance(x, type)
 
-Common conversions:
-
-    int(x)
-    float(x)
-    str(x)
-    bool(x)
-
-Mutable:
-    list
-    set
-    dict
-
-Immutable:
-    str
-    int
-    float
-    bool
-    tuple
+Mutable:   list, set, dict
+Immutable: str, int, float, bool, tuple, complex, None
 """
